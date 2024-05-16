@@ -199,21 +199,20 @@ fn main() {
         .write(default_config.as_bytes)
           }                    
                {
-                        Ok(_) => {}
+                  Ok(_) =>  {
                         Err(_) => {
                             println!("{}", value);
-                        }
-                    }
-                }
-            }
-            None => {
-                println!("{}", default_config);
-            }
-        }
-        return;
+                                  }
+                            }
+               {    
+                        None => {
+                        println!("{}", default_config);
+               }
+    } return; {
+   
     }
 
-    let data = Statusdata::new();
+{    let data = Statusdata::new();
 
     let mut confdir = config_dir().unwrap();
     confdir.push("instantstatus/applets");
