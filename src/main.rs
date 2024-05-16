@@ -4,7 +4,7 @@ use std::io::Write;
 use std::path::PathBuf;
 use std::process::Command;
 
-use clap::{App, AppSettings, Arg, ArgMatches};
+use clap::{App, AppSettings, Arg};
 use toml::Value;
 use x11rb::connection::Connection;
 use x11rb::protocol::xproto::*;
