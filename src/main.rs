@@ -196,9 +196,9 @@ fn main() {
         .version("0.0.1")
         .author("paperbenni <paperbenni@gmail.com>")
         .about("simple status bar for instantWM")
-        .write(default_config.as_bytes()
-               }                    
-                {
+        .write(default_config.as_bytes)
+          }                    
+               {
                         Ok(_) => {}
                         Err(_) => {
                             println!("{}", value);
