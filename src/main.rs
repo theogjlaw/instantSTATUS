@@ -196,27 +196,7 @@ fn main() {
         .version("0.0.1")
         .author("paperbenni <paperbenni@gmail.com>")
         .about("simple status bar for instantWM")
-        .arg(
-            Arg::new("write-config-file")
-                .short('w')
-                .about("write the default configuration file to stdout (-) or to a file")
-                .takes_value(true),
-        )
-        .setting(AppSettings::ColoredHelp)
-        .get_matches();
-
-    if matches.is_present("write-config-file") {
-        match matches.value_of("write-config-file") {
-            Some(value) => {
-                if value == "-" {
-                    println!("{}", default_config);
-                } else {
-                    match OpenOptions::new()
-                        .write(true)
-                        .create(true)
-                        .open(value)
-                        .unwrap()
-                        .write(default_config.as_bytes())
+        .write(default_config.as_bytes())
                     {
                         Ok(_) => {}
                         Err(_) => {
